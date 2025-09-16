@@ -3,218 +3,255 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>자기소개 페이지</title>
-    <style>
-      body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: #f4f4f4;
-        color: #333;
-      }
-      header {
-        background: #333;
-        color: white;
-        padding: 1rem;
-        text-align: center;
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      nav {
-        width: 100%;
-      }
-      nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-      }
-      nav li {
-        display: inline;
-      }
-      nav a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-      }
-
-      /* 햄버거 메뉴 */
-      .menu-toggle {
-        display: none;
-        flex-direction: column;
-        cursor: pointer;
-        width: 30px;
-        height: 25px;
-        justify-content: space-between;
-        z-index: 11;
-      }
-      .menu-toggle div {
-        height: 4px;
-        background: white;
-        border-radius: 2px;
-      }
-
-      @media (max-width: 600px) {
-        nav ul {
-          display: none;
-          flex-direction: column;
-          width: 100%;
-          background: #000000;
-          opacity: 0.7;
-          position: fixed;
-          top: 0;
-          left: 0;
-          height: 100vh;
-          z-index: 10;
-        }
-        nav ul.show {
-          display: flex;
-        }
-        .menu-toggle {
-          display: flex;
-        }
-      }
-
-      section {
-        display: none;
-        padding: 2rem;
-        min-height: 80vh;
-        background: #fff;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        margin: 1rem;
-        border-radius: 10px;
-      }
-      
-      section:target {
-        display: block;
-        animation: fadeIn 0.5s;
-      }
-
-      section#intro {
-        display: block;
-      }
-    
-      .layout-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1.5rem;
-      }
-      .card {
-        background: #fafafa;
-        padding: 1rem;
-        border-radius: 10px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      }
-      .card h3 {
-        margin-top: 0;
-      }
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-    </style>
+    <title>포트폴리오</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
   <body>
-    <header>
-      <nav>
-        <ul id="menu">
-          <li><a href="#intro">소개</a></li>
-          <li><a href="#report">레포트</a></li>
-          <li><a href="#project">프로젝트</a></li>
-          <li><a href="#portfolio">포트폴리오</a></li>
-        </ul>
-      </nav>
-      <div class="menu-toggle" onclick="toggleMenu()">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    </header>
+    <canvas id="matrix"></canvas>
 
-    <!-- 페이지 내용 그대로 유지 -->
-    <section id="intro">
-      <h2>간단한 소개</h2>
-      <div class="layout-grid">
-        <div class="card">
-          <h3>자기소개</h3>
-          <p>
-            안녕하세요! 동의과학대학교 컴퓨터소프트웨어과 이예진입니다
-          </p>
-        </div>
-        <div class="card">
-          <h3>음성으로 듣기</h3>
-          <audio controls>
-            <source src="sample.mp3" type="audio/mpeg" />
-            브라우저가 오디오를 지원하지 않습니다
-          </audio>
-        </div>
-      </div>
-    </section>
-    <section id="report">
-      <h2>레포트</h2>
-      <div class="layout-grid">
-        <div class="card">
-          <h3>보고서 1</h3>
-          <p>HTML & CSS 구조 이해에 관한 간단한 요약 내용</p>
-        </div>
-        <div class="card">
-          <h3>보고서 2</h3>
-          <p>반응형 웹 디자인 관련 학습 자료 요약</p>
-        </div>
-        <div class="card">
-          <h3>보고서 3</h3>
-          <p>웹 접근성에 대한 조사 및 정리 내용</p>
-        </div>
-      </div>
-    </section>
-    <section id="project">
-      <h2>프로젝트</h2>
-      <div class="layout-grid">
-        <div class="card">
-          <h3>프로젝트 영상</h3>
-          <video controls width="100%">
-            <source src="sample.mp4" type="video/mp4" />
-            브라우저가 비디오를 지원하지 않습니다
-          </video>
-        </div>
-        <div class="card">
-          <h3>프로젝트 설명</h3>
-          <p>
-            이 프로젝트는 반응형 웹 페이지 제작을 목표로 진행되었습니다 HTML,
-            CSS 기초와 레이아웃 학습을 포함합니다
-          </p>
-        </div>
-      </div>
-    </section>
-    <section id="portfolio">
-      <h2>포트폴리오</h2>
-      <div class="layout-grid">
-        <div class="card">
-          <h3>웹사이트 디자인</h3>
-          <p>반응형 레이아웃 샘플 작업물</p>
-        </div>
-        <div class="card">
-          <h3>자바스크립트 기능</h3>
-          <p>간단한 동적 페이지 구현</p>
-        </div>
-        <div class="card">
-          <h3>추가 작업</h3>
-          <p>다양한 포트폴리오 아이템을 여기에 추가할 수 있습니다</p>
-        </div>
-      </div>
-    </section>
+    <div class="container">
+      <main class="content">
+        <!-- 메뉴 -->
+        <header class="tabs">
+          <div class="hamburger" id="hamburger">&#9776;</div>
+          <nav>
+            <ul>
+              <li>
+                <a href="#" data-tab="intro" class="active"
+                  ><i class="fa-solid fa-user"></i> 자기소개</a
+                >
+              </li>
+              <li>
+                <a href="#" data-tab="report"
+                  ><i class="fa-solid fa-file-lines"></i> 레포트</a
+                >
+              </li>
+              <li>
+                <a href="#" data-tab="project"
+                  ><i class="fa-solid fa-diagram-project"></i> 프로젝트</a
+                >
+              </li>
+              <li>
+                <a href="#" data-tab="portfolio"
+                  ><i class="fa-solid fa-briefcase"></i> 포트폴리오</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </header>
 
-    <script>
-      function toggleMenu() {
-        document.getElementById("menu").classList.toggle("show");
-      }
-    </script>
+        <!-- 자기소개 -->
+        <section id="intro" class="tab-content active">
+          <h1><i class="fa-solid fa-user"></i> 자기소개</h1>
+          <div class="profile-card flex-left">
+            <img
+              src="https://i.pinimg.com/1200x/7d/bc/e5/7dbce53bde0db81e05b87a485d64f72f.jpg"
+              alt="Profile Photo"
+            />
+            <div class="profile-text">
+              <h2>이예진</h2>
+              <p>컴퓨터소프트웨어과 2학년 | 웹/앱 개발 & UX/UI 디자인</p>
+              <div class="tags">
+                <span>Creative</span>
+                <span>Active</span>
+                <span>UX/UI</span>
+                <span>Publishing</span>
+              </div>
+              <audio controls>
+                <source
+                  src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+                  type="audio/mpeg"
+                />
+              </audio>
+            </div>
+          </div>
+          <p>
+            안녕하세요! 다양한 프로젝트 경험을 통해 디자인과 개발 능력을 키워온
+            웹 개발자입니다. 최신 기술을 활용하여 사용자 친화적인 인터페이스를
+            만드는 것을 좋아합니다.
+          </p>
+        </section>
+
+        <!-- 레포트 -->
+        <section id="report" class="tab-content">
+          <h1>
+            <i class="fa-solid fa-file-lines"></i> 레포트: 반응형 웹 UX 개선
+          </h1>
+          <div class="report-section">
+            <h2>개요</h2>
+            <p>
+              사용자 경험 향상을 위해 기존 웹사이트의 반응형 디자인을 분석하고
+              개선 방안을 제시했습니다.
+            </p>
+          </div>
+
+          <div class="report-grid">
+            <div class="report-card flex-left">
+              <img
+                src="https://www.krds.go.kr/resources/img/guide/contents/style/layout_grid_01.png"
+                alt="레이아웃 개선"
+              />
+              <div>
+                <h3>레이아웃 최적화</h3>
+                <p>
+                  모바일과 데스크탑 화면에서 콘텐츠 간격과 가독성을
+                  개선했습니다.
+                </p>
+              </div>
+            </div>
+            <div class="report-card flex-left">
+              <img
+                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=400&q=80"
+                alt="네비게이션 개선"
+              />
+              <div>
+                <h3>네비게이션 개선</h3>
+                <p>
+                  메뉴 구조를 단순화하여 사용자가 원하는 기능을 빠르게 찾을 수
+                  있도록 수정했습니다.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="report-section conclusion">
+            <h2>결론 & 느낀 점</h2>
+            <p>
+              UX 개선 후 사용자 만족도가 향상되었으며, 반응형 디자인의 중요성을
+              다시 한번 느꼈습니다.
+            </p>
+            <video controls width="80%">
+              <source
+                src="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+        </section>
+
+        <!-- 프로젝트 -->
+        <section id="project" class="tab-content">
+          <h1>
+            <i class="fa-solid fa-diagram-project"></i> 프로젝트: 학사관리 앱
+          </h1>
+
+          <div class="project-section overview flex-left">
+            <img
+              src="https://cdn.aitimes.kr/news/photo/202509/36419_55317_5340.jpg"
+              alt="프로젝트 이미지"
+            />
+            <div>
+              <h2>개요</h2>
+              <p>
+                학생 정보, 출석, 성적 관리를 통합한 웹 기반 학사관리 앱 개발
+                프로젝트입니다.
+              </p>
+            </div>
+          </div>
+
+          <div class="project-section">
+            <h2>목표 & 역할</h2>
+            <ul class="icon-list">
+              <li>
+                <i class="fa-solid fa-bullseye"></i> 목표: 사용자 친화적 UI
+                제공과 효율적 데이터 관리
+              </li>
+              <li>
+                <i class="fa-solid fa-user-pen"></i> 역할: 기획, 디자인,
+                프론트엔드, 백엔드
+              </li>
+              <li>
+                <i class="fa-solid fa-code"></i> 기술 스택: HTML, CSS, JS,
+                React, Node.js, MongoDB
+              </li>
+            </ul>
+          </div>
+
+          <div class="project-section features">
+            <h2>주요 기능</h2>
+            <ul class="icon-list">
+              <li>
+                <i class="fa-solid fa-database"></i> 학생 정보 등록/수정/삭제
+              </li>
+              <li>
+                <i class="fa-solid fa-calendar-check"></i> 출석 및 성적 관리
+              </li>
+              <li><i class="fa-solid fa-network-wired"></i> REST API 연동</li>
+              <li>
+                <i class="fa-solid fa-mobile-screen-button"></i> 반응형 웹
+                디자인 지원
+              </li>
+            </ul>
+          </div>
+
+          <div class="project-section process">
+            <h2>개발 과정 & 문제 해결</h2>
+            <ul class="icon-list">
+              <li>
+                <i class="fa-solid fa-gear"></i> 기획 → 디자인 →
+                프론트엔드/백엔드 개발 → 테스트
+              </li>
+              <li>
+                <i class="fa-solid fa-triangle-exclamation"></i> REST API 연동
+                데이터 충돌 → 서버 검증 로직 추가로 해결
+              </li>
+              <li>
+                <i class="fa-solid fa-mobile-screen"></i> 모바일 레이아웃 깨짐 →
+                CSS 미디어쿼리 최적화
+              </li>
+            </ul>
+          </div>
+
+          <div class="project-section results">
+            <h2>결과 & 느낀 점</h2>
+            <p>프로젝트 구현 완료 및 로컬 배포 완료</p>
+            <p>
+              배운 점: 프론트엔드/백엔드 통합 경험, REST API 설계 경험, 반응형
+              웹 구현 경험
+            </p>
+          </div>
+        </section>
+
+        <!-- 포트폴리오 -->
+        <section id="portfolio" class="tab-content">
+          <h1>
+            <i class="fa-solid fa-briefcase"></i> 포트폴리오: 대표 웹 프로젝트
+          </h1>
+
+          <div class="portfolio-grid">
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?auto=format&fit=crop&w=200&q=80"
+                alt="학사관리 앱"
+              />
+              <h4>학사관리 앱</h4>
+              <p>
+                React + Node.js 기반, 학생 관리, 출석/성적 관리, REST API 연동
+              </p>
+              <a href="#project">상세보기</a>
+            </div>
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80"
+                alt="모바일 앱 UI"
+              />
+              <h4>모바일 앱 UI</h4>
+              <p>
+                React Native 기반 UI 설계, 직관적 인터페이스와 심플 네비게이션
+                구현
+              </p>
+              <a href="#project">상세보기</a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="matrix.js"></script>
   </body>
 </html>
