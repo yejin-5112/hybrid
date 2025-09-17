@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>개인 포트폴리오</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="profile-header">
+          <img
+            src="source/profile.jpg"
+            alt="프로필 이미지"
+            class="profile-img"
+          />
+          <div class="profile-info">
+            <h2>이예진</h2>
+            <p>프론트엔드 개발자</p>
+          </div>
+        </div>
+        <button class="hamburger-menu" aria-label="메뉴 열기">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav class="tabs">
+          <a href="#intro" class="tab-button active"
+            ><i class="fa-solid fa-user"></i> 자기소개</a
+          >
+          <a href="#report" class="tab-button"
+            ><i class="fa-solid fa-file-lines"></i> 레포트</a
+          >
+          <a href="#project" class="tab-button"
+            ><i class="fa-solid fa-diagram-project"></i> 프로젝트</a
+          >
+          <a href="#portfolio" class="tab-button"
+            ><i class="fa-solid fa-briefcase"></i> 포트폴리오</a
+          >
+        </nav>
+      </header>
+
+      <main class="content">
+        <section id="intro" class="tab-content active">
+          <h1><i class="fa-solid fa-user"></i> 자기소개</h1>
+          <div class="profile-card flex-left">
+            <img src="source/profile.jpg" alt="프로필 사진" />
+            <div class="profile-details">
+              <h3>이예진</h3>
+              <p>프론트엔드 개발자</p>
+              <p><i class="fa-solid fa-envelope"></i> example@example.com</p>
+              <p><i class="fa-solid fa-phone"></i> 010-1234-5678</p>
+            </div>
+          </div>
+          <p>
+            안녕하세요! 최신 기술을 활용하여 사용자 친화적인 인터페이스를 만드는
+            것을 좋아하는 개발자 김재영입니다. 웹 프론트엔드 기술에 대한 깊은
+            이해와 실제 프로젝트 경험을 바탕으로, 사용자에게 즐거운 경험을
+            제공하는 서비스를 만들어나가고 싶습니다.
+          </p>
+
+          <div class="section-divider"></div>
+
+          <div class="intro-section">
+            <h2>핵심 역량</h2>
+            <ul class="icon-list">
+              <li>
+                <i class="fa-solid fa-code"></i> **프론트엔드 개발**: HTML5,
+                CSS3, JavaScript를 기반으로 사용자 경험(UX)을 고려한 반응형 웹
+                페이지를 개발할 수 있습니다. React를 활용한 컴포넌트 기반 개발에
+                익숙하며, 재사용 가능한 코드를 작성하기 위해 노력합니다.
+              </li>
+              <li>
+                <i class="fa-solid fa-mobile-alt"></i> **반응형 웹 디자인**:
+                다양한 디바이스 환경에 최적화된 UI/UX를 구현하며, 미디어 쿼리와
+                유연한 레이아웃을 활용하여 사용자 접근성을 높입니다.
+              </li>
+              <li>
+                <i class="fa-solid fa-object-group"></i> **UI/UX 이해**: 사용자
+                행동 패턴을 분석하고, 사용성 테스트를 통해 직관적이고 효율적인
+                인터페이스를 설계합니다. Figma를 활용한 프로토타이핑 경험이
+                있습니다.
+              </li>
+              <li>
+                <i class="fa-solid fa-people-group"></i> **협업 및 소통**: 팀
+                프로젝트에서 Jira, Git을 활용해 효율적으로 협업하고, 원활한
+                커뮤니케이션을 통해 프로젝트 목표를 달성했습니다. 코드 리뷰를
+                통해 동료들과 함께 성장하는 것을 중요하게 생각합니다.
+              </li>
+            </ul>
+          </div>
+
+          <div class="section-divider"></div>
+
+          <div class="intro-section">
+            <h2>기술 스택</h2>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <i class="fa-brands fa-html5"></i>
+                <span>HTML5</span>
+              </div>
+              <div class="skill-item">
+                <i class="fa-brands fa-css3-alt"></i>
+                <span>CSS3</span>
+              </div>
+              <div class="skill-item">
+                <i class="fa-brands fa-js"></i>
+                <span>JavaScript (ES6+)</span>
+              </div>
+              <div class="skill-item">
+                <i class="fa-brands fa-react"></i>
+                <span>React</span>
+              </div>
+              <div class="skill-item">
+                <i class="fa-brands fa-node-js"></i>
+                <span>Node.js (Express)</span>
+              </div>
+              <div class="skill-item">
+                <i class="fa-brands fa-github"></i>
+                <span>Git & GitHub</span>
+              </div>
+              <div class="skill-item">
+                <i class="fa-solid fa-database"></i>
+                <span>MySQL</span>
+              </div>
+              <div class="skill-item">
+                <i class="fa-brands fa-figma"></i>
+                <span>Figma</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-divider"></div>
+
+          <div class="intro-section">
+            <h2>학력</h2>
+            <p>
+              <strong>동의과학대학교 컴퓨터소프트웨어과 재학중</strong>
+            </p>
+          </div>
+        </section>
+
+        <section id="report" class="tab-content">
+          <h1>
+            <i class="fa-solid fa-file-lines"></i> 레포트: 반응형 웹 UX 개선
+          </h1>
+          <div class="report-section">
+            <h2>개요</h2>
+            <p>
+              본 레포트는 특정 웹사이트의 모바일 환경 UX(사용자 경험) 문제를
+              분석하고, 이를 개선하기 위한 방안을 제시 및 적용하여 사용자
+              만족도를 향상시킨 과정을 담고 있습니다. 사용자 이탈률 감소와
+              접근성 증대를 목표로 하였습니다.
+            </p>
+          </div>
+
+          <div class="section-divider"></div>
+
+          <div class="report-section">
+            <h2>문제 분석</h2>
+            <p>
+              기존 웹사이트는 모바일 환경에서 다음과 같은 문제점을 안고
+              있었습니다.
+            </p>
+            <ul class="bullet-list">
+              <li>
+                낮은 텍스트 가독성: 작은 글씨 크기와 부적절한 줄 간격으로 정보
+                습득 어려움.
+              </li>
+              <li>
+                복잡한 네비게이션: 모바일 화면에 맞지 않는 메뉴 구조로 인한
+                사용자 혼란.
+              </li>
+              <li>
+                긴 페이지 로딩 시간: 최적화되지 않은 이미지와 스크립트로 인한
+                로딩 지연.
+              </li>
+              <li>
+                <strong>데이터 분석 결과</strong>: 모바일 환경에서 데스크톱 대비
+                30% 높은 이탈률과 20% 낮은 페이지당 체류 시간을 기록.
+              </li>
+            </ul>
+          </div>
+
+          <div class="section-divider"></div>
+
+          <div class="report-section">
+            <h2>개선 방안 및 적용</h2>
+            <div class="report-grid">
+              <div class="report-item">
+                <h3>
+                  <i class="fa-solid fa-ruler-combined"></i> 레이아웃 최적화
+                </h3>
+                <p>
+                  모바일 뷰포트에 맞춰 유연한 그리드 시스템과 Flexbox를 활용하여
+                  콘텐츠의 흐름을 재배치했습니다. 텍스트 크기, 버튼 크기를
+                  터치하기 쉽도록 조정하고, 충분한 여백을 확보하여 가독성을
+                  높였습니다.
+                </p>
+              </div>
+              <div class="report-item">
+                <h3><i class="fa-solid fa-compass"></i> 네비게이션 개선</h3>
+                <p>
+                  기존의 복잡한 메뉴를 햄버거 메뉴로 변경하고, 중요도가 높은
+                  메뉴를 상단에 배치하여 접근성을 높였습니다. 터치 영역을 충분히
+                  확보하여 오클릭을 방지했습니다.
+                </p>
+              </div>
+              <div class="report-item">
+                <h3><i class="fa-solid fa-image"></i> 이미지 및 자원 최적화</h3>
+                <p>
+                  반응형 이미지를 적용하고(srcset), 웹팩(Webpack)을 사용하여
+                  이미지와 자바스크립트 파일을 압축, 번들링하여 초기 로딩 시간을
+                  단축했습니다. 지연 로딩(Lazy Loading)을 구현하여 불필요한 자원
+                  로딩을 최소화했습니다.
+                </p>
+              </div>
+            </div>
+            <p class="image-caption"></p>
+          </div>
+
+          <div class="section-divider"></div>
+
+          <div class="report-section conclusion">
+            <h2>결과 & 느낀 점</h2>
+            <p>
+              UX 개선 프로젝트를 통해 모바일 환경에서의 이탈률을
+              <strong>15%로 감소</strong>시켰으며, 사용자 만족도를
+              <strong>20% 향상</strong>시켰습니다. 또한, 페이지 로딩 속도를
+              <strong>평균 2초 단축</strong>하는 성과를 달성했습니다.
+            </p>
+            <p>
+              이번 경험을 통해 문제점을 데이터 기반으로 분석하고, 사용자 중심의
+              해결 방안을 모색하며, 기술적으로 이를 구현하는 역량을 키울 수
+              있었습니다. 사용자 피드백을 통해 끊임없이 개선해나가는 개발의
+              중요성을 깨달았습니다.
+            </p>
+          </div>
+        </section>
+
+        <section id="project" class="tab-content">
+          <h1>
+            <i class="fa-solid fa-diagram-project"></i> 프로젝트: 디저트 쇼핑몰
+          </h1>
+          <div class="project-summary">
+            <p>
+              Q&A(질문과 답변)를 활용한 웹사이트 구축 프로젝트의 일환으로, 고객
+              문의 및 리뷰 시스템을 갖춘 디저트 쇼핑몰 웹사이트를 개발했습니다.
+              기획부터 디자인, 프론트엔드 및 백엔드 개발, 데이터베이스 구축까지
+              프로젝트의 전반적인 과정을 팀원들과 함께 수행했습니다.
+            </p>
+            <p class="tech-stack">
+              <strong>기술 스택:</strong> React, Node.js (Express), MySQL, HTML,
+              CSS
+            </p>
+          </div>
+
+          <div class="section-divider"></div>
+
+          <div class="project-section role">
+            <h2>개인 기여도</h2>
+            <ul class="bullet-list">
+              <li>
+                <strong>기획 및 디자인 (80%)</strong>: 사용자 피드백을 기반으로
+                쇼핑몰 기능을 기획하고, Figma를 활용하여 직관적인 레이아웃과
+                UI/UX 디자인을 담당했습니다.
+              </li>
+              <li>
+                <strong>프론트엔드 개발 (100%)</strong>: React를 사용하여 상품
+                목록, 상세 페이지, 장바구니, Q&A 게시판 등 사용자 인터페이스를
+                구현했습니다.
+              </li>
+              <li>
+                <strong>백엔드 개발 (10%)</strong>: Node.js와 Express를 활용하여
+                상품 정보, 주문, Q&A 게시글을 관리하는 RESTful API를 설계 및
+                개발했습니다.
+              </li>
+              <li>
+                <strong>데이터베이스 설계 (10%)</strong>: MySQL을 사용하여 상품,
+                주문, 회원, Q&A 등 필요한 모든 테이블 스키마를 설계했습니다.
+              </li>
+            </ul>
+          </div>
+
+          <div class="section-divider"></div>
+
+          <div class="project-section process">
+            <h2>개발 과정 & 문제 해결</h2>
+            <ul class="icon-list">
+              <li>
+                <i class="fa-solid fa-gear"></i> **개발 프로세스**:
+                기획(요구사항 정의) → 디자인(Figma) → 프론트엔드/백엔드 동시
+                개발 → 통합 테스트
+              </li>
+              <li>
+                <i class="fa-solid fa-triangle-exclamation"></i> **기술적
+                도전**: 고객 Q&A 게시판에서 이미지 업로드 및 실시간으로 댓글이
+                추가되는 기능을 구현하는 데 어려움이 있었습니다.
+              </li>
+              <li>
+                <i class="fa-solid fa-wrench"></i> **해결 방안**:
+                <ol>
+                  <li>
+                    **이미지 업로드**: Multer 라이브러리를 사용하여 서버에
+                    이미지를 안전하게 저장하고, 클라이언트에서는 이미지 경로를
+                    전송하여 처리했습니다.
+                  </li>
+                  <li>
+                    **실시간 업데이트**: 웹소켓 대신 React의 상태 관리와 API
+                    폴링 방식을 사용하여 댓글이 추가되거나 삭제될 때마다 해당
+                    컴포넌트를 자동으로 리렌더링하도록 구현하여 실시간성을
+                    확보했습니다.
+                  </li>
+                </ol>
+              </li>
+            </ul>
+          </div>
+
+          <div class="section-divider"></div>
+
+          <div class="project-section results">
+            <h2>결과 & 느낀 점</h2>
+            <video controls width="80%">
+              <source src="source/test.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <p>
+              사용자 친화적인 UI와 효율적인 Q&A 시스템을 갖춘 디저트 쇼핑몰
+              웹사이트를 성공적으로 완성했습니다.
+            </p>
+            <p>
+              **배운 점**: 처음부터 끝까지 하나의 서비스를 완성해보는 경험을
+              통해, 프론트엔드와 백엔드 간의 데이터 흐름을 명확하게 이해할 수
+              있었습니다. 특히, 고객의 질문과 피드백을 처리하는 Q&A 기능을
+              구현하면서 사용자 중심의 기능 설계와 데이터 관리의 중요성을
+              깨달았습니다. 팀 프로젝트를 통해 협업의 가치와 함께 문제를
+              해결하는 과정을 경험할 수 있었던 의미 있는 시간이었습니다.
+            </p>
+          </div>
+        </section>
+
+        <section id="portfolio" class="tab-content">
+          <h1>
+            <i class="fa-solid fa-briefcase"></i> 포트폴리오: 대표 웹 프로젝트
+          </h1>
+          <p>
+            제가 참여하거나 직접 개발한 주요 프로젝트들을 소개합니다. 각
+            프로젝트는 저의 기술 역량과 문제 해결 능력을 보여줍니다.
+          </p>
+          <div class="section-divider"></div>
+
+          <div class="portfolio-grid">
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?auto=format&fit=crop&w=400&q=80"
+                alt="학사관리 앱 썸네일"
+              />
+              <h4>디저트 쇼핑몰</h4>
+              <p>**React + Node.js 기반**: 온라인 디저트 판매 쇼핑몰</p>
+              <p>**주요 기능**: 로그인, Q&A</p>
+              <p>
+                **역할**: 기획 및 디자인, 프론트엔드 개발, 데이터베이스 설계
+              </p>
+              <a href="#project" class="btn-detail">상세보기</a>
+            </div>
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=400&q=80"
+                alt="모바일 앱 UI 썸네일"
+              />
+              <h4>모바일 앱 UI/UX 개선 프로젝트</h4>
+              <p>
+                **Figma & React Native 기반**: 기존 모바일 앱의 사용자 경험 개선
+              </p>
+              <p>**주요 기능**: 직관적 인터페이스, 간소화된 네비게이션</p>
+              <p>**역할**: UI/UX 디자인, 프론트엔드 일부 구현</p>
+              <a href="project" target="_blank" class="btn-detail">데모 보기</a>
+            </div>
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=400&q=80"
+                alt="개인 기술 블로그 썸네일"
+              />
+              <h4>개인 기술 블로그</h4>
+              <p>
+                **Gatsby (React) 기반**: 개발 학습 및 경험 공유를 위한 개인
+                블로그
+              </p>
+              <p>**주요 기능**: 마크다운 포스팅, 검색 기능, 카테고리 분류</p>
+              <p>**역할**: 기획, 디자인, 개발, 배포 전반</p>
+              <a href="blog" target="_blank" class="btn-detail">블로그 방문</a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
