@@ -189,44 +189,7 @@
           <h1>Kakao 사랑</h1>
         </div>
       </div>
-
-      <!-- Weather Page -->
-      <div data-role="page" id="weather" data-theme="b">
-        <div data-role="header" data-position="fixed" data-theme="b">
-          <a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
-          <h1>Kakao 날씨</h1>
-        </div>
-        <div data-role="content" class="container my-3">
-          <div class="card text-center shadow">
-            <div class="card-header bg-primary text-white">부산 날씨</div>
-            <div class="card-body" id="weather-info">
-              <p>불러오는 중...</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <script>
-        const serviceKey = ${{ secrets.API_KEY }};
-        const tmFc = "202509240600";
-        const url = `https://apis.data.go.kr/1360000/MidFcstInfoService/getMidLandFcst?serviceKey=${serviceKey}&numOfRows=10&pageNo=1&regId=11H20000&tmFc=${tmFc}&dataType=JSON`;
-
-        fetch(url)
-          .then((res) => res.json())
-          .then((data) => {
-            const item = data.response.body.items.item[0];
-            document.getElementById(
-              "weather-info"
-            ).innerHTML = `
-              <p><strong>4일 후</strong> 오전: ${item.wf4Am}, 오후: ${item.wf4Pm}</p>
-              <p><strong>5일 후</strong> 오전: ${item.wf5Am}, 오후: ${item.wf5Pm}</p>
-              <p><strong>6일 후</strong> 오전: ${item.wf6Am}, 오후: ${item.wf6Pm}</p>
-              <p><strong>7일 후</strong> 오전: ${item.wf7Am}, 오후: ${item.wf7Pm}</p>
-            `;
-          })
-          .catch((err) => console.error(err));
-      </script>
-
   </body>
 </html>
+
 
