@@ -1,0 +1,232 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kakao 소개 앱</title>
+
+    <!-- jQuery Mobile -->
+    <link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.4.5.min.css" />
+    <script src="jquery.mobile/jquery-1.11.1.min.js"></script>
+    <script src="jquery.mobile/jquery.mobile-1.4.5.min.js"></script>
+
+     <!-- Bootstrap 5 -->
+    <link href="jquery.mobile/bootstrap.min.css" rel="stylesheet">
+    <script src="jquery.mobile/bootstrap.bundle.min.js"></script>
+    <script src="cordova.js"></script>
+
+    <style>
+      li {
+        list-style: none;
+      }
+      .picture {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .picture li {
+        float: left;
+        width: 50%;
+      }
+      .picture li a {
+        display: block;
+        margin: 5px;
+        border: 1px;
+      }
+      .picture li img {
+        display: block;
+        width: 50%;
+        height: auto;
+      }
+      .picture li img:hover {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .main img{
+        margin:  0 auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div data-theme="b">
+      <!-- Home Page -->
+      <div data-role="page" id="home">
+        <div data-role="header" data-theme="b">
+          <h1>Kakao 소개 앱</h1>
+        </div>
+        <div class="d-grid gap-2 col-8 mx-auto my-4 main">
+          <img width="200px" height="auto" src="sybmtitLogo.png" />
+          <a href="#intro" class="btn btn-outline-warning">Kakao 소개</a>
+          <a href="#movie" class="btn btn-outline-warning" data-rel="dialog">Kakao YouTube</a>
+          <a href="#gallery" class="btn btn-outline-warning">Kakao etc</a>
+          <a href="#weather" class="btn btn-outline-warning">Kakao 날씨</a>
+        </div>
+
+        <div data-role="footer" data-position="fixed" data-theme="b">
+          <h1>Kakao 사랑</h1>
+        </div>
+      </div>
+
+      <!-- Intro Page -->
+      <div data-role="page" id="intro" data-theme="b">
+        <div data-role="header" data-theme="b">
+          <a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
+          <h1>Kakao 소개</h1>
+        </div>
+        <div data-role="content">
+          <div style="text-align: center">
+            <img width="200px" height="auto" src="symbolLogo.png" />
+          </div>
+          <div
+            data-role="collapsible-set"
+            data-theme="b"
+            data-content-theme="e"
+          >
+            <div data-role="collapsible" data-collapsed="false">
+              <h3>Kakao 소개&비전</h3>
+              <p>
+                카카오는 다양한 IT 서비스를 제공하는 대한민국 대표 플랫폼 기업이다.<br />
+                 “모든 연결의 시작, 카카오”<br />
+                카카오는 기술과 사람을 연결하여 더 나은 세상을 만들어 갑니다.
+              </p>
+            </div>
+            <div data-role="collapsible">
+              <h3>Kakao 공홈</h3>
+              <p>
+                <a href="https://www.kakaocorp.com" target="_blank">
+                  👉 카카오 공식 홈페이지 바로가기
+                </a>
+              </p>
+            </div>
+            <div data-role="collapsible">
+              <h3>Kakao 주요 서비스</h3>
+              <p>
+                - 카카오톡 (메신저)<br />
+                - 카카오페이 (간편결제)<br />
+                - 카카오모빌리티 (카카오T)<br />
+                - 카카오게임즈<br />
+                - 카카오엔터테인먼트
+              </p>
+            </div>
+          </div>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+          <h1>Kakao 사랑</h1>
+        </div>
+      </div>
+
+      <!-- Movie Page -->
+      <div data-role="page" id="movie" data-theme="b">
+        <div data-role="header" data-position="fixed" data-theme="b">
+          <h1>Kakao 영상</h1>
+        </div>
+        <div data-role="content">
+          <div class="ui-bar ui-bar-e">Kakao 소개 동영상</div>
+          <br />
+          <li>
+            <iframe
+              width="100%"
+              height="270"
+              src="https://www.youtube.com/embed/13Dfwhq0Qhg"
+              title="카카오톡 | 쓰는이에 집중, 쓰기좋게 맞춤"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </li>
+          <br />
+          <div class="ui-bar ui-bar-e">Kakao 홍보 동영상</div>
+          <br />
+          <li>
+            <iframe
+              width="100%"
+              height="270"
+              src="https://www.youtube.com/embed/pyg5BWzpy5Y"
+              title="그래서 춘식이는 오늘도! 열심 열심 💪 우리집 막둥이부터 할머니, 반찬가게 사장님까지. 모두에게 필요한 미래가 궁금하다면? 💛 더 가깝게, 카카오"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </li>
+        </div>
+        <div data-role="footer" data-theme="b"></div>
+      </div>
+
+      <!-- Gallery Page -->
+      <div data-role="page" id="gallery" data-theme="b">
+        <div data-role="header" data-position="fixed" data-theme="b">
+          <a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
+          <h1>Kakao 갤러리</h1>
+        </div>
+        <div data-role="content">
+          <ul class="picture">
+            <li>
+              <a href="1.jpg" rel="external"><img src="1.jpg" /></a>
+            </li>
+            <li>
+              <a href="2.jpg" rel="external"><img src="2.jpg" /></a>
+            </li>
+            <li>
+              <a href="3.jpg" rel="external"><img src="3.jpg" /></a>
+            </li>
+            <li>
+              <a href="4.jpg" rel="external"><img src="4.jpg" /></a>
+            </li>
+            <li>
+              <a href="5.jpg" rel="external"><img src="5.jpg" /></a>
+            </li>
+            <li>
+              <a href="6.jpg" rel="external"><img src="6.jpg" /></a>
+            </li>
+          </ul>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+          <h1>Kakao 사랑</h1>
+        </div>
+      </div>
+
+      <!-- Weather Page -->
+      <div data-role="page" id="weather" data-theme="b">
+        <div data-role="header" data-position="fixed" data-theme="b">
+          <a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
+          <h1>Kakao 날씨</h1>
+        </div>
+        <div data-role="content" class="container my-3">
+          <div class="card text-center shadow">
+            <div class="card-header bg-primary text-white">부산 날씨</div>
+            <div class="card-body" id="weather-info">
+              <p>불러오는 중...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        const serviceKey =
+          " ";
+        const tmFc = "202509240600";
+        const url = `https://apis.data.go.kr/1360000/MidFcstInfoService/getMidLandFcst?serviceKey=${serviceKey}&numOfRows=10&pageNo=1&regId=11H20000&tmFc=${tmFc}&dataType=JSON`;
+
+        fetch(url)
+          .then((res) => res.json())
+          .then((data) => {
+            const item = data.response.body.items.item[0];
+            document.getElementById(
+              "weather-info"
+            ).innerHTML = `
+              <p><strong>4일 후</strong> 오전: ${item.wf4Am}, 오후: ${item.wf4Pm}</p>
+              <p><strong>5일 후</strong> 오전: ${item.wf5Am}, 오후: ${item.wf5Pm}</p>
+              <p><strong>6일 후</strong> 오전: ${item.wf6Am}, 오후: ${item.wf6Pm}</p>
+              <p><strong>7일 후</strong> 오전: ${item.wf7Am}, 오후: ${item.wf7Pm}</p>
+            `;
+          })
+          .catch((err) => console.error(err));
+      </script>
+
+  </body>
+</html>
