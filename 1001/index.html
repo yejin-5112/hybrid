@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -61,7 +61,7 @@
           <img width="200px" height="auto" src="sybmtitLogo.png" />
           <a href="#intro" class="btn btn-outline-warning">Kakao 소개</a>
           <a href="#movie" class="btn btn-outline-warning" data-rel="dialog">Kakao YouTube</a>
-          <a href="#gallery" class="btn btn-outline-warning">Kakao etc</a>
+          <a href="#gallery" class="btn btn-outline-warning">Kakao 바로가기</a>
         </div>
 
         <div data-role="footer" data-position="fixed" data-theme="b">
@@ -85,29 +85,27 @@
             data-content-theme="e"
           >
             <div data-role="collapsible" data-collapsed="false">
-              <h3>Kakao 소개&비전</h3>
+              <h3>Kakao 소개</h3>
               <p>
-                카카오는 다양한 IT 서비스를 제공하는 대한민국 대표 플랫폼 기업이다.<br />
-                 “모든 연결의 시작, 카카오”<br />
-                카카오는 기술과 사람을 연결하여 더 나은 세상을 만들어 갑니다.
+                - 카카오(Kakao)는 대한민국 대표 IT 플랫폼 기업으로, 다양한 디지털 서비스를 제공하고 있습니다.<br/>
+                - 2006년 카카오톡 출시를 시작으로 메신저, 결제, 모빌리티, 게임, 엔터테인먼트 등 다양한 분야로 확장되었습니다.
               </p>
             </div>
-            <div data-role="collapsible">
-              <h3>Kakao 공홈</h3>
+            <div data-role="collapsible" data-collapsed="false">
+              <h3>Kakao 비전</h3>
               <p>
-                <a href="https://www.kakaocorp.com" target="_blank">
-                  👉 카카오 공식 홈페이지 바로가기
-                </a>
+                <strong>“모든 연결의 시작, 카카오”</strong> <br/>
+                사람과 기술을 연결하여 더 나은 일상과 편리한 서비스를 만드는 것을 목표로 합니다.
               </p>
             </div>
             <div data-role="collapsible">
               <h3>Kakao 주요 서비스</h3>
               <p>
-                - 카카오톡 (메신저)<br />
-                - 카카오페이 (간편결제)<br />
-                - 카카오모빌리티 (카카오T)<br />
-                - 카카오게임즈<br />
-                - 카카오엔터테인먼트
+                <strong>카카오톡</strong>: 국내 대표 메신저, 개인과 기업을 연결<br/>
+                <strong>카카오페이</strong>: 간편 결제 및 금융 서비스<br/>
+                <strong>카카오모빌리티</strong>: 카카오T 택시, 내비, 대리운전 등 이동 서비스<br/>
+                <strong>카카오게임즈</strong>: 게임 개발 및 퍼블리싱<br/>
+                <strong>카카오엔터테인먼트</strong>: 음악, 영상, 콘텐츠 제작 및 유통
               </p>
             </div>
           </div>
@@ -160,36 +158,44 @@
       <div data-role="page" id="gallery" data-theme="b">
         <div data-role="header" data-position="fixed" data-theme="b">
           <a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
-          <h1>Kakao 갤러리</h1>
+          <h1>Kakao 바로가기</h1>
         </div>
-        <div data-role="content">
-          <ul class="picture">
-            <li>
-              <a href="1.jpg" rel="external"><img src="1.jpg" /></a>
-            </li>
-            <li>
-              <a href="2.jpg" rel="external"><img src="2.jpg" /></a>
-            </li>
-            <li>
-              <a href="3.jpg" rel="external"><img src="3.jpg" /></a>
-            </li>
-            <li>
-              <a href="4.jpg" rel="external"><img src="4.jpg" /></a>
-            </li>
-            <li>
-              <a href="5.jpg" rel="external"><img src="5.jpg" /></a>
-            </li>
-            <li>
-              <a href="6.jpg" rel="external"><img src="6.jpg" /></a>
-            </li>
-          </ul>
+        <div class="container my-4">
+          <div class="row g-3">
+            <div class="col-6">
+              <a href="https://www.kakaocorp.com"
+                class="d-block text-center p-4 rounded text-dark text-decoration-none"
+                style="border: 1px solid rgba(0,0,0,0.2); background-color: rgba(255,255,255,0.8);">
+                홈페이지
+              </a>
+            </div>
+            <div class="col-6">
+              <a href="https://www.youtube.com/@Kakaobrandmedia"
+                class="d-block text-center p-4 rounded text-dark text-decoration-none"
+                style="border: 1px solid rgba(0,0,0,0.2); background-color: rgba(255,255,255,0.8);">
+                유튜브
+              </a>
+            </div>
+            <div class="col-6">
+              <a href="https://www.instagram.com/kakao.today/"
+                class="d-block text-center p-4 rounded text-dark text-decoration-none"
+                style="border: 1px solid rgba(0,0,0,0.2); background-color: rgba(255,255,255,0.8);">
+                인스타
+              </a>
+            </div>
+            <div class="col-6">
+              <a href="https://www.kakaocorp.com/ir/disclosureInformation"
+                class="d-block text-center p-4 rounded text-dark text-decoration-none"
+                style="border: 1px solid rgba(0,0,0,0.2); background-color: rgba(255,255,255,0.8);">
+                공시정보
+              </a>
+            </div>
+          </div>
         </div>
+
         <div data-role="footer" data-position="fixed" data-theme="b">
           <h1>Kakao 사랑</h1>
         </div>
       </div>
   </body>
 </html>
-
-
-
