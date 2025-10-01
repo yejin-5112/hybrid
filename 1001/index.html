@@ -207,8 +207,7 @@
       </div>
 
       <script>
-        const serviceKey =
-          " ";
+        const serviceKey = ${{ secrets.API_KEY }};
         const tmFc = "202509240600";
         const url = `https://apis.data.go.kr/1360000/MidFcstInfoService/getMidLandFcst?serviceKey=${serviceKey}&numOfRows=10&pageNo=1&regId=11H20000&tmFc=${tmFc}&dataType=JSON`;
 
@@ -230,3 +229,4 @@
 
   </body>
 </html>
+
